@@ -24,3 +24,9 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
     res.sendStatus(401);
   } 
 };
+
+export const generateToken = (user_name: string) => {
+  const secretKey = process.env.JWT_SECRET_KEY || '';
+
+  return jwt.sign({ user_name }, secretKey, { expiresIn: '1h' });
+};

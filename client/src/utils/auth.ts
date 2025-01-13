@@ -34,14 +34,14 @@ class AuthService {
 
   login(idToken: string) {
     // TODO: set the token to localStorage
-    localStorage.setItem('id_token', idToken);
+    localStorage.setItem('id_Token', idToken);
     // TODO: redirect to the home page
     window.location.assign('/');
   }
 
   logout() {
     // TODO: remove the token from localStorage
-    localStorage.removeItem('id_token');
+    localStorage.removeItem('id_Token');
     // TODO: redirect to the login page
     window.location.assign('/');
   }
