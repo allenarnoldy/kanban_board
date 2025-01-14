@@ -9,12 +9,15 @@ const Login = () => {
     password: ''
   });
 
+  const [errorMessage, setErrorMessage] = useState(''); 
+
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setLoginData({
       ...loginData,
       [name]: value
     });
+    setErrorMessage('');
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -24,6 +27,7 @@ const Login = () => {
       Auth.login(data.token);
     } catch (err) {
       console.error('Failed to login', err);
+      setErrorMessage('Invalid username or password. Please try again.');
     }
   };
 
@@ -45,7 +49,8 @@ const Login = () => {
           value={loginData.password || ''}
           onChange={handleChange}
         />
-        <button type='submit'>Submit Form</button>
+        <button type='submit'>Login</button>
+        {errorMessage && <p className="error">{errorMessage}</p>}
       </form>
     </div>
     
