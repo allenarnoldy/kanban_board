@@ -1,6 +1,6 @@
 # Kanban Board
 
-
+![Screenshot 2025-01-13 at 6 45 58 PM](https://github.com/user-attachments/assets/66705689-ac09-494c-a87a-0429f1d8c49a)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
